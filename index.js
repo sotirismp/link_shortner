@@ -1,9 +1,12 @@
 const express = require('express')
-var bodyParser = require('body-parser')
+var favicon = require('serve-favicon');
+
+
 const app = express()
 
 app.use(express.static('public'))
 app.use(express.json())
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 require('dotenv').config()
 const { MongoClient } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@shortner.2h0aj.mongodb.net/url?retryWrites=true&w=majority`;
@@ -47,7 +50,7 @@ app.get('/:id', async (req, res) => {
 })
 
 app.listen( process.env.PORT || 3000, async () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at http://localhost:${process.env.PORT || 3000}`)
   /*await client.connect();
   const database = client.db("url");
   haiku = database.collection("URL");
