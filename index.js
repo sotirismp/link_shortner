@@ -1,7 +1,6 @@
 const express = require('express')
 var bodyParser = require('body-parser')
 const app = express()
-const port = 3000
 
 app.use(express.static('public'))
 app.use(express.json())
@@ -47,7 +46,7 @@ app.get('/:id', async (req, res) => {
   }
 })
 
-app.listen(port, async () => {
+app.listen( process.env.PORT || 3000, async () => {
   console.log(`Example app listening at http://localhost:${port}`)
   /*await client.connect();
   const database = client.db("url");
