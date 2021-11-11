@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --white: #D9E4EC;
+    --light: #B7CFDC;
+    --grey: #6AABD2;
+    --black: #385E72;
+    --lightgreen: #7aff7a;
+}
+body{
+    /*background-color: rgba(50,61,72);*/
+    /*color:rgba(168,182,186);*/
+    color: #D9E4EC;
+    background-color: #385E72;
+    font-family: 'Red Hat Mono', monospace;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.slogan{
+    font-size:1rem;
+}
+.input_form{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.url{
+    height: 50px;
+    width:500px;
+    border-radius: 20px 0 0 20px;
+    border: 0;
+    padding: 20px;
+    background-color:#B7CFDC;
+    color:#385E72;
+    font-size:1rem;
+}
+.url:focus{
+    border:0;
+    outline: none;
+}
+.create{
+    font-size:1rem;
+    border-radius: 0 20px 20px 0;
+    border: 0;
+    background-color: #B7CFDC;
+    border-left:1px solid #000000;
+    width:100px;
+
+}
+.create:hover{
+    transition: 0.5s all ease-out;
+    background-color: #6AABD2;
+    cursor: pointer;
+}
+.response_container{
+    padding-top:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+}
+.response_form{
+    padding-top:10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.response_url{
+    height: 50px;
+    width:500px;
+    border-radius: 20px 0 0 20px;
+    border: 0;
+    padding: 20px;
+    background-color:#B7CFDC;
+    color:#385E72;
+    font-size:1rem;
+}
+.response_url:focus{
+    border:0;
+    outline: none;
+}
+.copy{
+    font-size:1rem;
+    border-radius: 0 20px 20px 0;
+    border: 0;
+    background-color: #B7CFDC;
+    border-left:1px solid #000000;
+    width:100px;
+
+}
+.copy:hover{
+    transition: 0.5s all ease-out;
+    background-color: #6AABD2;
+    cursor: pointer;
+}
+.footer{
+    width:800px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+    bottom: 0;
+    padding:20px;
+}
+.links_con{
+}
+.instagram{
+    font-size:2rem;
+    color:var(--light)
+}
+.facebook{
+    font-size:2rem;
+    color:var(--light)
+}
+.github{
+    font-size:2rem;
+    color:var(--light)
+}
+.linkedin{
+    font-size:2rem;
+    color:var(--light)
+}
+
+@media screen and (max-width: 992px) {
+    .logo{
+        font-size:1.5rem;
+        padding-top:30px;
+    }
+    .url{
+        font-size:0.75rem;
+        width:250px;
+    }
+    .create{
+        font-size:0.75rem;
+        width:75px;
+    }
+    .response_url{
+        font-size:0.75rem;
+        width:250px;
+    }
+    .copy{
+        font-size:0.75rem;
+        width:75px;
+    }
+
+    .footer{
+        width:400px;
+        font-size: 0.75rem;
+    }
+
+    .instagram,.github,.facebook,.linkedin{
+        font-size:1.5rem;
+    }
+
+  }
+  
+@media screen and (max-width: 350px) {
+    .logo{
+        padding-top:50px;
+    }
+    .url{
+        font-size:0.75rem;
+        width:175px;
+    }
+    .create{
+        font-size:0.5rem;
+        width:50px;
+    }
+    .response_url{
+        font-size:0.75rem;
+        width:175px;
+    }
+    .copy{
+        font-size:0.5rem;
+        width:50px;
+    }
+    .footer{
+        position: relative;
+        width:300px;
+        font-size: 0.75rem;
+    }
+
+    .instagram,.github,.facebook,.linkedin{
+        font-size:1.25rem;
+    }
+  }
